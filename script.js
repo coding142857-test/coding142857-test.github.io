@@ -1,37 +1,4 @@
-const title = {
-    '0. 國文': [
-        '第一課'
-    ],
-    '1. 英文': [
-        'Unit1'
-    ],
-    '2. 數學': [
-        '1-1 數與式'
-    ],
-    '3. 物理': [
-        '1-1'
-    ],
-    '4. 化學': [
-        '1-1'
-    ],
-    '5. 地科': [
-        '1-1'
-    ],
-    '6. 地理': [
-        '1-1'
-    ],
-    '7. 歷史': [
-        '1-1'
-    ],
-    '8. 公民': [
-        '1-1 公民身分與權利內涵演變',
-        '1-2 我國各項公民權利如何發展與落實'
-    ],
-}
-
 var qua, ans, level, cerrect, isCheck;
-
-
 
 function initial() {
     ans = '';
@@ -108,7 +75,7 @@ function loadLevel(level) {
     ans = '';
 
     if (qua.type === 'choose') {
-        for (index of['A', 'B', 'C', 'D']) {
+        for (index in qua.index[level][1]) {
             element = document.createElement('button');
             element.innerHTML = qua.index[level][1][index];
             element.tag = index;
