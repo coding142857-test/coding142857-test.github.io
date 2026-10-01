@@ -189,11 +189,16 @@ function finished() {
             <button onclick="gets();">確認</button>
             <br>
             <button onclick="mode('dark');" id="mode">深色模式</button>
-        </div>
-        <div id="main" class="divHide">
+            <br>
+            <span>字型大小</span>
+            <button onclick="document.documentElement.style.fontSize = '16px';">小</button>
+            <button onclick="document.documentElement.style.fontSize = '24px';">中</button>
+            <button onclick="document.documentElement.style.fontSize = '32px';">大</button>
+         /div>
+         div id="main" class="divHide">
             <span id="mainTitle"></span>
             <div id="mainIndex"></div>
-        </div>`;
+         /div>`;
         initial();
     };
     document.getElementById('mainIndex').appendChild(element);
